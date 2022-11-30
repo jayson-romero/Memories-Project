@@ -1,3 +1,4 @@
+// 1.0
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose  from 'mongoose';
@@ -5,6 +6,7 @@ import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
 
+// 1.1
 const app = express();
 
 app.use('/posts', postRoutes);
@@ -20,3 +22,4 @@ mongoose.connect(CONNECTION_URL)
 .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
 .catch((error) => console.log(error.message));
 
+// 2.0 is in routes/posts.js 
